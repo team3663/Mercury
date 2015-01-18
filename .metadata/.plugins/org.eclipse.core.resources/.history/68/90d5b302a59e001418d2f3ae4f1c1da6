@@ -1,0 +1,44 @@
+package org.usfirst.frc.team3663.robot.subsystems;
+
+import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.Encoder;
+import org.usfirst.frc.team3663.robot.RobotMap;
+
+/**
+ *
+ */
+public class DriveTrainSS extends Subsystem 
+{
+    // Put methods for controlling this subsystem
+    // here. Call these from Commands.
+	CANTalon driveTalonL1, driveTalonL2, driveTalonR1, driveTalonR2;
+	Encoder leftEncoder, rightEncoder;
+	
+	double mag = 0.2;
+	int encoderValL;
+	int encoderValR;
+	
+    public void initDefaultCommand() 
+    {
+        // Set the default command for a subsystem here.
+        //setDefaultCommand(new MySpecialCommand());
+    }
+    
+    public DriveTrainSS()
+    {
+    	driveTalonL1 = new CANTalon(0);
+    	driveTalonL2 = new CANTalon(1);
+    	driveTalonR1 = new CANTalon(2);
+    	driveTalonR2 = new CANTalon(3);
+
+    	leftEncoder = new Encoder (RobotMap.leftEncoderPort1, RobotMap.leftEncoderPort2);
+    }
+    
+    public void encoderDrive()
+    {
+    	driveTalonL1.set(mag);
+    	driveTalonL2.set(mag);
+    }
+}
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DriverStation"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.buttons.JoystickButton"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.TalonSRX"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.CANTalon"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
+</qualifiedTypeNameHistroy>
