@@ -1,0 +1,10 @@
+1421542741238	Move file
+1421542775495	Move file
+1421974180800	Rename local variable 'ticksL'
+1421974202820	Rename local variable 'ticksOut'
+1421974525824	Rename field 'inchToTick'
+1421976792958	Rename field 'rateAtFullPwr'
+1421979042036	Rename type 'C_EncoderDrive'
+1422070490846	Rename field 'tickPerInch'
+1422122878408	Rename field 'twist'
+1422138138499	Rename type 'C_EncoderTurn'

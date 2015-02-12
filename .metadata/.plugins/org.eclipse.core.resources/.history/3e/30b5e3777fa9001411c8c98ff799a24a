@@ -1,0 +1,72 @@
+package org.usfirst.frc.team3663.robot.commands;
+
+import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+import org.usfirst.frc.team3663.robot.Robot;
+
+/**
+ *
+ */
+public class C_EncoderDriveF extends Command {
+
+	int Inches;
+	boolean finished = false;
+	double speed, topSpeed;
+	int currTicksL, currTicksR, ticksL, ticksR, changeInTicksL, changeInTicksR,
+		lastTicksL, lastTicksR, desiredTicksL, desiredTicksR;
+	double currTime, lastTime;
+	double ticksPerInch = 780/23.561944905;
+	
+    public C_EncoderDriveF(int inches, double TopSpeed) {
+        // Use requires() here to declare subsystem dependencies
+   //     requires(Robot.chassis);
+        Inches = inches;
+        topSpeed = TopSpeed;
+    }
+
+    // Called just before this Command runs the first time
+    protected void initialize() {
+    	ticksL = (int)(Inches*ticksPerInch);
+    	ticksR = (int)(Inches*ticksPerInch);
+    	lastTicksL = 0;
+    	lastTicksR = 0;
+    	currTime = lastTime = Timer.getFPGATimestamp();
+    }
+
+    // Called repeatedly when this Command is scheduled to run
+    protected void execute() {
+    	currTicksL = Robot.chassis.getLeftEncoderTicks();
+    	currTicksR = Robot.chassis.getRightEncoderTicks();
+    	changeInTicksL = currTicksL - lastTicksL;
+    	if (speed < topSpeed && (changeInTicksL > desiredTicksL || changeinTicksR < desiredTicksR))
+    	{
+    		speed+=0.025;
+    		Robot.chassis.setSpeed(speed);
+    	}
+    	else if (speed < topSpeed && (||))
+    	{
+    		
+    	}
+    	SmartDashboard.putNumber("leftEncoder: ", Robot.chassis.getLeftEncoderTicks());
+    	SmartDashboard.putNumber("leftEncoder: ", Robot.chassis.getRightEncoderTicks());
+    	if (changeInTicksL <= ticksL && changeInTicksR >= ticksR) finished = true;
+    }
+
+    // Make this return true when this Command no longer needs to run execute()
+    protected boolean isFinished() {
+        if (finished) return true;
+        else return false;
+    }
+
+    // Called once after isFinished returns true
+    protected void end() {
+    	speed = 0;
+    }
+
+    // Called when another command which requires one or more of the same
+    // subsystems is scheduled to run
+    protected void interrupted() {
+    }
+}

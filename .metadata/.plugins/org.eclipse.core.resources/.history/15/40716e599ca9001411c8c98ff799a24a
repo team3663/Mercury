@@ -1,0 +1,53 @@
+package org.usfirst.frc.team3663.robot.commands;
+
+import edu.wpi.first.wpilibj.command.Command;
+import org.usfirst.frc.team3663.robot.Robot;
+
+/**
+ *
+ */
+public class C_EncoderDrive2 extends Command {
+
+	int changeTicksL, changeTicksR;
+	int desiredTicksL;
+	int desiredTicksR;
+	int succeededTimesL, succeededTimesR;
+	
+    public C_EncoderDrive2(int deltaTicksL, int deltaTicksR) {
+        // Use requires() here to declare subsystem dependencies
+        // eg. requires(chassis);
+    	changeTicksL = deltaTicksL;
+    	changeTicksR = deltaTicksR;
+    }
+    
+    protected void initialize() {
+    	desiredTicksL = Robot.chassis.getLeftEncoderTicks() - changeTicksL;
+    	desiredTicksR = Robot.chassis.getRightEncoderTicks() + changeTicksR;
+    	succeededTimesL = succeededTimesR = 0;
+    }
+
+    protected void execute() {
+    	Robot.chassis.encoderDrive(desiredTicksL, desiredTicksR);
+    }
+
+    // Make this return true when this Command no longer needs to run execute()
+    protected boolean isFinished() {
+    	if (Math.abs(desiredTicksR - Robot.chassis.getRightEncoderTicks()) < 50) 
+    	{
+    		succeededTimesR++;
+    	}
+    	else succeededTimesR = 0;
+    	if (succeededTimesR < 4) return true;
+        else return false;
+    }
+
+    // Called once after isFinished returns true
+    protected void end() {
+    	
+    }
+
+    // Called when another command which requires one or more of the same
+    // subsystems is scheduled to run
+    protected void interrupted() {
+    }
+}

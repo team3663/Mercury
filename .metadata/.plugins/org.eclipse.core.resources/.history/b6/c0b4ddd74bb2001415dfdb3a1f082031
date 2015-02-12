@@ -1,0 +1,31 @@
+package org.usfirst.frc.team3663.robot.subsystems;
+
+import edu.wpi.first.wpilibj.command.Subsystem;
+import org.usfirst.frc.team3663.robot.commands.C_ArcadeDrive;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.Encoder;
+
+/**
+ *
+ */
+public class SSDriveTrain extends Subsystem {
+    
+    // Put methods for controlling this subsystem
+    // here. Call these from Commands.
+	CANTalon driveMotorL1 = new CANTalon(14);
+	CANTalon driveMotorL2 = new CANTalon(15);
+	CANTalon driveMotorR1 = new CANTalon(11);
+	CANTalon driveMotorR2 = new CANTalon(10);
+
+    public void initDefaultCommand() {
+        // Set the default command for a subsystem here.
+        setDefaultCommand(new C_ArcadeDrive());
+    }
+    
+    public void arcadeDrive(Joystick driveStick)
+    {
+    	
+    }
+}
+

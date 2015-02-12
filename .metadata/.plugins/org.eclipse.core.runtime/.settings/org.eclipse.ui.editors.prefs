@@ -1,2 +1,11 @@
+AbstractTextEditor.Color.Background=216,182,224
+AbstractTextEditor.Color.Background.SystemDefault=false
+AbstractTextEditor.Color.SelectionBackground=116,56,131
+AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
+AbstractTextEditor.Color.SelectionForeground=243,207,254
+AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+currentLineColor=190,160,201
 eclipse.preferences.version=1
+lineNumberColor=100,65,114
 overviewRuler_migration=migrated_3.1
+spellingEnabled=false
