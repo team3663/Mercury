@@ -25,10 +25,10 @@ public class SSDriveTrain extends Subsystem {
     
     public SSDriveTrain()
     {
-    	driveMotorL1 = new CANTalon(14);
-    	driveMotorL2 = new CANTalon(15);
-    	driveMotorR1 = new CANTalon(11);
-    	driveMotorR2 = new CANTalon(10);
+    	driveMotorL1 = new CANTalon(10);
+    	driveMotorL2 = new CANTalon(11);
+    	driveMotorR1 = new CANTalon(20);
+    	driveMotorR2 = new CANTalon(21);
     	
     	chassis = new RobotDrive(driveMotorL1, driveMotorL2, driveMotorR1, driveMotorR2);
     }

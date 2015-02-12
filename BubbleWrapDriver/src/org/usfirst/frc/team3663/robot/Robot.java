@@ -20,7 +20,7 @@ import org.usfirst.frc.team3663.robot.subsystems.SSDriveTrain;
 public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
-	public static SSDriveTrain chassis = new SSDriveTrain();
+	public static SSDriveTrain ssDriveTrain;
 	public static OI oi;
 
 	Command arcadeDrive;
@@ -31,7 +31,7 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-    	chassis = new SSDriveTrain();
+    	ssDriveTrain = new SSDriveTrain();
 		oi = new OI();
 		
 		arcadeDrive = new C_ArcadeDrive();

@@ -10,7 +10,7 @@ public class C_ArcadeDrive extends Command {
 
     public C_ArcadeDrive() {
         // Use requires() here to declare subsystem dependencies
-        requires(Robot.chassis);
+        requires(Robot.ssDriveTrain);
     }
 
     // Called just before this Command runs the first time
@@ -19,7 +19,7 @@ public class C_ArcadeDrive extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.chassis.arcadeDrive(Robot.oi.driveStick);
+    	Robot.ssDriveTrain.arcadeDrive(Robot.oi.driveStick);
     }
 
     // Make this return true when this Command no longer needs to run execute()
