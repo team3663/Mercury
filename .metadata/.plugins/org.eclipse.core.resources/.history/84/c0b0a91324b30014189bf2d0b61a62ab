@@ -31,8 +31,6 @@ public class SSDriveTrain extends Subsystem {
     	driveMotorR2 = new CANTalon(10);
     	
     	chassis = new RobotDrive(driveMotorL1, driveMotorL2, driveMotorR1, driveMotorR2);
-    	
-    	System.out.println("SSDriveTrain created");
     }
     
     public void arcadeDrive(Joystick driveStick)
