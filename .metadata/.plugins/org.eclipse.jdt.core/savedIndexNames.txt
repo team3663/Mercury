@@ -1,5 +1,0 @@
-INDEX VERSION 1.127+C:\workspace\Mercury\.metadata\.plugins\org.eclipse.jdt.core
-177382029.index
-2362108639.index
-1469985689.index
-3223366774.index

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename field &apos;currRate&apos; in &apos;org.usfirst.frc.team3663.robot.subsystems.DriveTrainSS&apos; to &apos;currRateL&apos;&#x0D;&#x0A;- Original project: &apos;Archimedes&apos;&#x0D;&#x0A;- Original element: &apos;org.usfirst.frc.team3663.robot.subsystems.DriveTrainSS.currRate&apos;&#x0D;&#x0A;- Renamed element: &apos;org.usfirst.frc.team3663.robot.subsystems.DriveTrainSS.currRateL&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;currRate&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;org.usfirst.frc.team3663.robot.subsystems{DriveTrainSS.java[DriveTrainSS^currRate" name="currRateL" references="true" setter="false" stamp="1422750807289" textual="false" version="1.0"/>
-</session>
