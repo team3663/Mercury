@@ -9,6 +9,7 @@ import org.usfirst.frc.team3663.robot.commands.ExampleCommand;
 import org.usfirst.frc.team3663.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team3663.robot.commands.C_ArcadeDrive;
 import org.usfirst.frc.team3663.robot.subsystems.SSDriveTrain;
+import org.usfirst.frc.team3663.robot.subsystems.SSArms;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -20,6 +21,7 @@ import org.usfirst.frc.team3663.robot.subsystems.SSDriveTrain;
 public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	public static final SSArms ssArms = new SSArms();
 	public static SSDriveTrain ssDriveTrain;
 	public static OI oi;
 
