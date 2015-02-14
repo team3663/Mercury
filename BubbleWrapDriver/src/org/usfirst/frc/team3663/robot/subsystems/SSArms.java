@@ -12,19 +12,19 @@ public class SSArms extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	Talon intakeMotor1, intakeMotor2, armsUpAndDownMotor1, armsUpAndDownMotor2;
-	Solenoid armInOut1, armInOut2;
+	Solenoid armOpenClose1, armOpenClose2;
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
     public SSArms(){
-    	intakeMotor1 = new Talon(3);
-    	intakeMotor2 = new Talon(1);
-    	armsUpAndDownMotor1 = new Talon(2);
-    	armsUpAndDownMotor2 = new Talon(1);
+    	intakeMotor1 = new Talon(0);
+    	intakeMotor2 = new Talon(3);
+    	armsUpAndDownMotor1 = new Talon(1);
+    	armsUpAndDownMotor2 = new Talon(2);
     	
-    	armInOut1 = new Solenoid(2,3);
-    	armInOut2 = new Solenoid(4,5);
+    	armOpenClose1 = new Solenoid(0,1);
+    	armOpenClose2 = new Solenoid(6,7);
     }
     
     public void intakeMotorsSet(double speed){
@@ -37,8 +37,8 @@ public class SSArms extends Subsystem {
     public void arm2UpDown(double speed){
     	armsUpAndDownMotor2.set(speed);
     }
-    public void armin1(boolean in){
-    	armInOut1.set(true);
+    public void armIn1(boolean in){
+    	armOpenClose1.set(true);
     }
 }
 

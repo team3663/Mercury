@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.Joystick;
 
 import org.usfirst.frc.team3663.robot.commands.C_Test;
 import org.usfirst.frc.team3663.robot.commands.ExampleCommand;
+import org.usfirst.frc.team3663.robot.commands.C_TestSensors;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -15,11 +16,11 @@ public class OI {
 	
 	public Joystick driveStick = new Joystick(0);
 	
-	public JoystickButton test;
+	public JoystickButton testSensors;
 	
 	public OI(){
-		test = new JoystickButton(driveStick, 12);
-		test.whenPressed(new C_Test());
+		testSensors = new JoystickButton(driveStick, 12);
+		testSensors.whileHeld(new C_TestSensors());
 	}
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.

@@ -3581,3 +3581,110 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2015-02-14 11:01:00.706
 !MESSAGE Installedjava
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:09:53.363
+!MESSAGE Running ant file: C:\workspace\Mercury\BubbleWrapDriver\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:09:53.368
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:11:35.819
+!MESSAGE Running ant file: C:\workspace\Mercury\BubbleWrapDriver\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:11:35.822
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:21:32.226
+!MESSAGE Running ant file: C:\workspace\Mercury\BubbleWrapDriver\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:21:32.247
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:21:45.566
+!MESSAGE Running ant file: C:\workspace\Mercury\BubbleWrapDriver\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:21:45.571
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:22:38.089
+!MESSAGE Running ant file: C:\workspace\Mercury\BubbleWrapDriver\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:22:38.093
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:23:37.829
+!MESSAGE Running ant file: C:\workspace\Mercury\BubbleWrapDriver\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:23:37.833
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:25:58.542
+!MESSAGE Running ant file: C:\workspace\Mercury\BubbleWrapDriver\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:25:58.546
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:26:35.893
+!MESSAGE Running ant file: C:\workspace\Mercury\BubbleWrapDriver\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:26:35.931
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:29:10.304
+!MESSAGE Project: EmptyOblivion Package: org.usfirst.frc.team3663.robot Project Type: edu.wpi.first.wpilib.plugins.java.wizards.newproject.JavaProjectType$3@749c8c94
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:29:20.074
+!MESSAGE Running ant file: C:\workspace\Mercury\EmptyOblivion\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:29:20.078
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:30:28.103
+!MESSAGE Running ant file: C:\workspace\Mercury\BubbleWrapDriver\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 11:30:28.108
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 13:06:04.525
+!MESSAGE [org.usfirst.frc.team3663.robot.commands [in src [in BubbleWrapDriver]]
+  ExampleCommand.java (not open)
+  C_ArcadeDrive.java
+    package org.usfirst.frc.team3663.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3663.robot.Robot
+    class C_ArcadeDrive
+      C_ArcadeDrive()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  [Working copy] C_Test.java
+    package org.usfirst.frc.team3663.robot.commands
+    import org.usfirst.frc.team3663.robot.Robot
+    import edu.wpi.first.wpilibj.command.Command
+    class C_Test
+      C_Test()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 13:06:04.551
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 13:06:04.577
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 13:06:04.582
+!MESSAGE Project: P/BubbleWrapDriver
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 13:06:14.441
+!MESSAGE Class: TestSensors Package: org.usfirst.frc.team3663.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 13:17:08.352
+!MESSAGE Running ant file: C:\workspace\Mercury\BubbleWrapDriver\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 13:17:08.401
+!MESSAGE Targets: deploy, Mode: run

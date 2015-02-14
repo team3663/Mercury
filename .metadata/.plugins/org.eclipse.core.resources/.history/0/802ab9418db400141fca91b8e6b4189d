@@ -1,0 +1,45 @@
+package org.usfirst.frc.team3663.robot.subsystems;
+
+import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.Solenoid;
+import edu.wpi.first.wpilibj.Talon;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.Encoder;
+
+/**
+ *
+ */
+public class SSElevator extends Subsystem {
+    
+    // Put methods for controlling this subsystem
+    // here. Call these from Commands.
+	CANTalon elevMotor1, elevMotor2;
+	Talon elevInAndOut;
+	Solenoid bikeBreak;
+	Encoder winchEncoder;
+    public void initDefaultCommand() {
+    	
+        // Set the default command for a subsystem here.
+        //setDefaultCommand(new MySpecialCommand());
+    }
+    public SSElevator(){
+    	bikeBreak = new Solenoid(2,3);
+    	elevInAndOut = new Talon(4);
+    	elevMotor1 = new CANTalon(15);
+    	elevMotor2 = new CANTalon(25);
+    	winchEncoder = new Encoder(1,2);
+    }
+    public void motor1Set(double speed){
+    	elevMotor1.set(speed);
+    }
+    public void motor2Set(double speed){
+    	elevMotor2.set(speed);
+    }
+    public void moveInAndOut(double speed){
+    	elevInAndOut.set(speed);
+    }
+    public void BikeBreakTrigger(boolean open){
+    	bikeBreak.set(open);
+    }
+    
+}

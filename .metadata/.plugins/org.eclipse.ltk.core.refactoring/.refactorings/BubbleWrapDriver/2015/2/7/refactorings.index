@@ -1,1 +1,5 @@
 1423699300458	Rename type 'SS_DriveTrain'
+1423942533686	Rename field 'armInOut1'
+1423942567986	Rename field 'armOpen2'
+1423942884395	Rename type 'SSLift'
+1423947989151	Rename type 'TestSensors'

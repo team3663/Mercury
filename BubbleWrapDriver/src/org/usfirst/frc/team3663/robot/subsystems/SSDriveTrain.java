@@ -1,7 +1,10 @@
 package org.usfirst.frc.team3663.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import org.usfirst.frc.team3663.robot.commands.C_ArcadeDrive;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.Encoder;
@@ -15,7 +18,7 @@ public class SSDriveTrain extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	CANTalon driveMotorL1, driveMotorL2, driveMotorR1, driveMotorR2;
-	Encoder leftEncoder, rightEncoder;
+	public Encoder leftEncoder, rightEncoder;
 	RobotDrive chassis;
 
     public void initDefaultCommand() {
@@ -32,12 +35,17 @@ public class SSDriveTrain extends Subsystem {
     	
     	chassis = new RobotDrive(driveMotorL1, driveMotorL2, driveMotorR1, driveMotorR2);
     	
+    	leftEncoder = new Encoder(3,4);
+    	rightEncoder = new Encoder(5,6);
+    	
     	System.out.println("SSDriveTrain created");
     }
     
     public void arcadeDrive(Joystick driveStick)
     {
     	chassis.arcadeDrive(driveStick);
+    	SmartDashboard.putNumber("leftDriveEncoder: ", leftEncoder.get());
+    	SmartDashboard.putNumber("rightDriveEncoder: ", rightEncoder.get());
     }
 }
 

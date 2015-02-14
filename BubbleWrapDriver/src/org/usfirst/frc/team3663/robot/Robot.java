@@ -5,11 +5,12 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team3663.robot.commands.ExampleCommand;
-import org.usfirst.frc.team3663.robot.subsystems.ExampleSubsystem;
+//import org.usfirst.frc.team3663.robot.subsystems.ExampleSubsystem;
+//import org.usfirst.frc.team3663.robot.commands.ExampleCommand;
 import org.usfirst.frc.team3663.robot.commands.C_ArcadeDrive;
 import org.usfirst.frc.team3663.robot.subsystems.SSDriveTrain;
 import org.usfirst.frc.team3663.robot.subsystems.SSArms;
+import org.usfirst.frc.team3663.robot.subsystems.SSElevator;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -20,9 +21,9 @@ import org.usfirst.frc.team3663.robot.subsystems.SSArms;
  */
 public class Robot extends IterativeRobot {
 
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
-	public static final SSArms ssArms = new SSArms();
+	public static SSArms ssArms;
 	public static SSDriveTrain ssDriveTrain;
+	public static SSElevator ssElevator;
 	public static OI oi;
 
 	Command arcadeDrive;
@@ -34,11 +35,12 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
     	ssDriveTrain = new SSDriveTrain();
+    	ssElevator = new SSElevator();
+    	//ssArms = new SSArms();
 		oi = new OI();
 		
 		arcadeDrive = new C_ArcadeDrive();
-        // instantiate the command used for the autonomous period
-        autonomousCommand = new ExampleCommand();
+       //autonomousCommand = new ExampleCommand();
     }
 	
 	public void disabledPeriodic() {
@@ -46,8 +48,7 @@ public class Robot extends IterativeRobot {
 	}
 
     public void autonomousInit() {
-        // schedule the autonomous command (example)
-        if (autonomousCommand != null) autonomousCommand.start();
+        //if (autonomousCommand != null) autonomousCommand.start();
     }
 
     /**
@@ -58,11 +59,7 @@ public class Robot extends IterativeRobot {
     }
 
     public void teleopInit() {
-		// This makes sure that the autonomous stops running when
-        // teleop starts running. If you want the autonomous to 
-        // continue until interrupted by another command, remove
-        // this line or comment it out.
-        if (autonomousCommand != null) autonomousCommand.cancel();
+       // if (autonomousCommand != null) autonomousCommand.cancel();
         arcadeDrive.start();
     }
 
