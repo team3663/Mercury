@@ -1,22 +1,28 @@
 package org.usfirst.frc.team3663.robot.commands;
 
-import org.usfirst.frc.team3663.robot.Robot;
-
 import edu.wpi.first.wpilibj.command.Command;
+import org.usfirst.frc.team3663.robot.Robot;
 
 /**
  *
  */
-public class C_ReverseMotorSpeed extends Command {
+public class C_ToggleBrake extends Command {
 
-    public C_ReverseMotorSpeed() {
+    public C_ToggleBrake() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.motorSpeedChange(-2*Robot.motorTestSpeed);
+    	if (Robot.ssElevator.brakeOn)
+    	{
+    		Robot.ssElevator.BikeBrakeTriggerClose();
+    	}
+    	else
+    	{
+    		Robot.ssElevator.BikeBrakeTriggerOpen();
+    	}
     }
 
     // Called repeatedly when this Command is scheduled to run

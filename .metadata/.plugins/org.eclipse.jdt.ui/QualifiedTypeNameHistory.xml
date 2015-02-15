@@ -8,7 +8,10 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team3663.robot.commands.C_ArcadeDrive"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.CANTalon.FeedbackDevice"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team3663.robot.subsystems.DriveTrainSS"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Encoder"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team3663.robot.subsystems.SSArms"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DigitalInput"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team3663.robot.Robot"/>
 </qualifiedTypeNameHistroy>

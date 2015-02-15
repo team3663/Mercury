@@ -3,7 +3,7 @@ package org.usfirst.frc.team3663.robot.subsystems;
 import org.usfirst.frc.team3663.robot.Robot;
 
 import edu.wpi.first.wpilibj.CANTalon;
-import edu.wpi.first.wpilibj.Solenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -19,16 +19,19 @@ public class SSElevator extends Subsystem {
     // here. Call these from Commands.
 	CANTalon elevMotor1, elevMotor2;
 	Talon elevInAndOut;
-	Solenoid bikeBreak;
+	DoubleSolenoid bikeBreak;
 	public Encoder winchEncoder;
 	public DigitalInput elevLimitSwitch;
+	
+	public boolean brakeOn;
+	
     public void initDefaultCommand() {
     	
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
     public SSElevator(){
-    	bikeBreak = new Solenoid(2,3);
+    	bikeBreak = new DoubleSolenoid(2,3);
     	elevInAndOut = new Talon(4);
     	elevMotor1 = new CANTalon(15);
     	elevMotor2 = new CANTalon(25);
@@ -44,8 +47,15 @@ public class SSElevator extends Subsystem {
     public void moveInAndOut(double speed){
     	elevInAndOut.set(speed);
     }
-    public void BikeBreakTrigger(boolean open){
-    	bikeBreak.set(open);
+    public void BikeBrakeTriggerOpen()
+    {
+    	bikeBreak.set(DoubleSolenoid.Value.kForward);
+    	brakeOn = true;
+    	SmartDashboard.putBoolean("brakeOn: ", brakeOn);
+    }
+    public void BikeBrakeTriggerClose(){
+    	bikeBreak.set(DoubleSolenoid.Value.kReverse);
+    	brakeOn = false;
     }
     
     public void logValues()

@@ -13,6 +13,7 @@ import org.usfirst.frc.team3663.robot.commands.C_DecrementMotorSpeed;
 import org.usfirst.frc.team3663.robot.commands.C_IncrementTestMotor;
 import org.usfirst.frc.team3663.robot.commands.C_DecrementTestMotor;
 import org.usfirst.frc.team3663.robot.commands.C_ReverseMotorSpeed;
+import org.usfirst.frc.team3663.robot.commands.C_ToggleBrake;
 
 public class OI {
 	
@@ -25,6 +26,7 @@ public class OI {
 	public JoystickButton incrementTestMotor;
 	public JoystickButton decrementTestMotor;
 	public JoystickButton reverseMotorSpeed;
+	public JoystickButton toggleBrake;
 	
 	public OI(){
 	//	testSensors = new JoystickButton(driveStick, 1);
@@ -47,6 +49,9 @@ public class OI {
 		
 		reverseMotorSpeed = new JoystickButton(driveStick, 2);
 		reverseMotorSpeed.whenPressed(new C_ReverseMotorSpeed());
+		
+		toggleBrake = new JoystickButton(driveStick, 12);
+		toggleBrake.whenPressed(new C_ToggleBrake());
 	}
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
