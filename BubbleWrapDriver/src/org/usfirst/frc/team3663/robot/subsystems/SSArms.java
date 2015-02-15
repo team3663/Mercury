@@ -29,6 +29,14 @@ public class SSArms extends Subsystem {
     
     public void intakeMotorsSet(double speed){
     	intakeMotor1.set(speed);
+    	intakeMotor2.set(-speed);
+    }
+    public void intakeMotor1Set(double speed)
+    {
+    	intakeMotor1.set(speed);
+    }
+    public void intakeMotor2Set(double speed)
+    {
     	intakeMotor2.set(speed);
     }
     public void arm1UpDown(double speed){

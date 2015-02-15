@@ -85,6 +85,15 @@ public class Robot extends IterativeRobot {
 		case 9:
 			testMotorName = "Elevator In/Out";
 			break;
+		case 10:
+			testMotorName = "LeftArm";
+			break;
+		case 11:
+			testMotorName = "RightArm";
+			break;
+		case 12:
+			testMotorName = "BothArms";
+			break;
 		default:
 			break;
     	}
@@ -94,7 +103,7 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
     	ssDriveTrain = new SSDriveTrain();
     	ssElevator = new SSElevator();
-    	//ssArms = new SSArms();
+    	ssArms = new SSArms();
 		oi = new OI();
 		
 		arcadeDrive = new C_ArcadeDrive();

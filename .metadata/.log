@@ -4709,3 +4709,219 @@ Caused by: java.lang.IllegalArgumentException: Widget has the wrong parent
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
 	... 24 more
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 19:03:49.409
+!MESSAGE [org.usfirst.frc.team3663.robot.commands [in src [in BubbleWrapDriver]]
+  C_Test.java
+    package org.usfirst.frc.team3663.robot.commands
+    import org.usfirst.frc.team3663.robot.Robot
+    import edu.wpi.first.wpilibj.command.Command
+    class C_Test
+      C_Test()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  C_TestSensors.java
+    package org.usfirst.frc.team3663.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
+    import org.usfirst.frc.team3663.robot.Robot
+    class C_TestSensors
+      int i
+      C_TestSensors()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  ExampleCommand.java
+    package org.usfirst.frc.team3663.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3663.robot.Robot
+    class ExampleCommand
+      ExampleCommand()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  C_ArcadeDrive.java
+    package org.usfirst.frc.team3663.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3663.robot.Robot
+    class C_ArcadeDrive
+      C_ArcadeDrive()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  [Working copy] C_MotorDriveTest.java
+    package org.usfirst.frc.team3663.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3663.robot.Robot
+    class C_MotorDriveTest
+      C_MotorDriveTest()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  C_IncrementMotorSpeed.java
+    package org.usfirst.frc.team3663.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3663.robot.Robot
+    class C_IncrementMotorSpeed
+      C_IncrementMotorSpeed()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  C_DecrementMotorSpeed.java
+    package org.usfirst.frc.team3663.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3663.robot.Robot
+    class C_DecrementMotorSpeed
+      C_DecrementMotorSpeed()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  C_IncrementTestMotor.java
+    package org.usfirst.frc.team3663.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3663.robot.Robot
+    class C_IncrementTestMotor
+      C_IncrementTestMotor()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  C_DecrementTestMotor.java
+    package org.usfirst.frc.team3663.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3663.robot.Robot
+    class C_DecrementTestMotor
+      C_DecrementTestMotor()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 19:03:49.456
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 19:03:49.456
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 19:03:49.471
+!MESSAGE Project: P/BubbleWrapDriver
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 19:04:10.504
+!MESSAGE Class: C_ReverseMotorSpeed Package: org.usfirst.frc.team3663.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 19:17:45.493
+!MESSAGE [org.usfirst.frc.team3663.robot.subsystems [in src [in BubbleWrapDriver]]
+  ExampleSubsystem.java
+    package org.usfirst.frc.team3663.robot.subsystems
+    import edu.wpi.first.wpilibj.command.Subsystem
+    class ExampleSubsystem
+      void initDefaultCommand()
+  SSDriveTrain.java
+    package org.usfirst.frc.team3663.robot.subsystems
+    import edu.wpi.first.wpilibj.command.Subsystem
+    import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
+    import org.usfirst.frc.team3663.robot.Robot
+    import org.usfirst.frc.team3663.robot.commands.C_ArcadeDrive
+    import edu.wpi.first.wpilibj.Joystick
+    import edu.wpi.first.wpilibj.CANTalon
+    import edu.wpi.first.wpilibj.Encoder
+    import edu.wpi.first.wpilibj.RobotDrive
+    class SSDriveTrain
+      CANTalon driveMotorL1
+      CANTalon driveMotorL2
+      CANTalon driveMotorR1
+      CANTalon driveMotorR2
+      Encoder leftEncoder
+      Encoder rightEncoder
+      RobotDrive chassis
+      void initDefaultCommand()
+      SSDriveTrain()
+      void arcadeDrive(Joystick)
+      void motor1Set(double)
+      void motor2Set(double)
+      void motor3Set(double)
+      void motor4Set(double)
+      void logValues()
+  [Working copy] SSArms.java
+    package org.usfirst.frc.team3663.robot.subsystems
+    import edu.wpi.first.wpilibj.Solenoid
+    import edu.wpi.first.wpilibj.Talon
+    import edu.wpi.first.wpilibj.command.Subsystem
+    class SSArms
+      Talon intakeMotor1
+      Talon intakeMotor2
+      Talon armsUpAndDownMotor1
+      Talon armsUpAndDownMotor2
+      Solenoid armOpenClose1
+      Solenoid armOpenClose2
+      void initDefaultCommand()
+      SSArms()
+      void intakeMotorsSet(double)
+      void intakeMotor1Set(double)
+      void intakeMotor2Set(double)
+      void arm1UpDown(double)
+      void arm2UpDown(double)
+      void armIn1(boolean)
+  SSElevator.java
+    package org.usfirst.frc.team3663.robot.subsystems
+    import org.usfirst.frc.team3663.robot.Robot
+    import edu.wpi.first.wpilibj.CANTalon
+    import edu.wpi.first.wpilibj.Solenoid
+    import edu.wpi.first.wpilibj.Talon
+    import edu.wpi.first.wpilibj.command.Subsystem
+    import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
+    import edu.wpi.first.wpilibj.Encoder
+    import edu.wpi.first.wpilibj.DigitalInput
+    class SSElevator
+      CANTalon elevMotor1
+      CANTalon elevMotor2
+      Talon elevInAndOut
+      Solenoid bikeBreak
+      Encoder winchEncoder
+      DigitalInput elevLimitSwitch
+      void initDefaultCommand()
+      SSElevator()
+      void motor1Set(double)
+      void motor2Set(double)
+      void moveInAndOut(double)
+      void BikeBreakTrigger(boolean)
+      void logValues()
+  [Working copy] SSCompressor.java
+    package org.usfirst.frc.team3663.robot.subsystems
+    import edu.wpi.first.wpilibj.Compressor
+    import edu.wpi.first.wpilibj.command.Subsystem
+    class SSCompresser
+      Compressor compresser
+      void initDefaultCommand()
+      SSCompresser()
+      void turnOn()
+      void turnOff()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 19:17:45.525
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 19:17:45.525
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 19:17:45.525
+!MESSAGE Project: P/BubbleWrapDriver
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2015-02-14 19:18:15.211
+!MESSAGE Class: SSCompressor Package: org.usfirst.frc.team3663.robot.subsystems
