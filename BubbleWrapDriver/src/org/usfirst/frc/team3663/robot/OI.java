@@ -7,20 +7,41 @@ import edu.wpi.first.wpilibj.Joystick;
 import org.usfirst.frc.team3663.robot.commands.C_Test;
 import org.usfirst.frc.team3663.robot.commands.ExampleCommand;
 import org.usfirst.frc.team3663.robot.commands.C_TestSensors;
+import org.usfirst.frc.team3663.robot.commands.C_MotorDriveTest;
+import org.usfirst.frc.team3663.robot.commands.C_IncrementMotorSpeed;
+import org.usfirst.frc.team3663.robot.commands.C_DecrementMotorSpeed;
+import org.usfirst.frc.team3663.robot.commands.C_IncrementTestMotor;
+import org.usfirst.frc.team3663.robot.commands.C_DecrementTestMotor;
 
-/**
- * This class is the glue that binds the controls on the physical operator
- * interface to the commands and command groups that allow control of the robot.
- */
 public class OI {
 	
 	public Joystick driveStick = new Joystick(0);
 	
 	public JoystickButton testSensors;
+	public JoystickButton motorDriveTest;
+	public JoystickButton incrementSpeed;
+	public JoystickButton decrementSpeed;
+	public JoystickButton incrementTestMotor;
+	public JoystickButton decrementTestMotor;
 	
 	public OI(){
-		testSensors = new JoystickButton(driveStick, 12);
-		testSensors.whileHeld(new C_TestSensors());
+	//	testSensors = new JoystickButton(driveStick, 1);
+		//testSensors.whileHeld(new C_TestSensors());
+		
+		motorDriveTest = new JoystickButton(driveStick, 1);
+		motorDriveTest.whileHeld(new C_MotorDriveTest());
+		
+		incrementSpeed = new JoystickButton(driveStick, 5);
+		incrementSpeed.whenPressed(new C_IncrementMotorSpeed());
+		
+		decrementSpeed = new JoystickButton(driveStick, 3);
+		decrementSpeed.whenPressed(new C_DecrementMotorSpeed());
+		
+		incrementTestMotor = new JoystickButton(driveStick, 6);
+		incrementTestMotor.whenPressed(new C_IncrementTestMotor());
+		
+		decrementTestMotor = new JoystickButton(driveStick, 4);
+		decrementTestMotor.whenPressed(new C_DecrementTestMotor());
 	}
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.

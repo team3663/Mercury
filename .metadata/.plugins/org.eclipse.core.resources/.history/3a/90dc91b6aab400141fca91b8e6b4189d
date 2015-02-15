@@ -1,0 +1,98 @@
+package org.usfirst.frc.team3663.robot.commands;
+
+import edu.wpi.first.wpilibj.command.Command;
+import org.usfirst.frc.team3663.robot.Robot;
+
+/**
+ *
+ */
+public class C_MotorDriveTest extends Command {
+	
+    public C_MotorDriveTest() {
+        // Use requires() here to declare subsystem dependencies
+        // eg. requires(chassis);
+    }
+
+    // Called just before this Command runs the first time
+    protected void initialize() {
+    }
+
+    // Called repeatedly when this Command is scheduled to run
+    protected void execute() {
+    	switch (Robot.testMotor)
+    	{
+		case 0:
+	    	Robot.ssDriveTrain.motor1Set(Robot.motorTestSpeed);
+    		break;
+		case 1:
+			Robot.ssDriveTrain.motor2Set(Robot.motorTestSpeed);
+			break;
+		case 2:
+			Robot.ssDriveTrain.motor3Set(Robot.motorTestSpeed);
+			break;
+		case 3:
+			Robot.ssDriveTrain.motor4Set(Robot.motorTestSpeed);
+			break;
+		case 4:
+	    	Robot.ssDriveTrain.motor1Set(Robot.motorTestSpeed);
+	    	Robot.ssDriveTrain.motor2Set(Robot.motorTestSpeed);
+			break;
+		case 5:
+	    	Robot.ssDriveTrain.motor3Set(Robot.motorTestSpeed);
+	    	Robot.ssDriveTrain.motor4Set(Robot.motorTestSpeed);
+			break;
+		case 11:
+			Robot.ssElevator.motor1Set(Robot.motorTestSpeed);
+			break;
+		case 12:
+			Robot.ssElevator.motor2Set(Robot.motorTestSpeed);
+			break;
+		default:
+			break;
+    	}
+    }
+
+    // Make this return true when this Command no longer needs to run execute()
+    protected boolean isFinished() {
+        return false;
+    }
+
+    // Called once after isFinished returns true
+    protected void end() {
+    }
+
+    // Called when another command which requires one or more of the same
+    // subsystems is scheduled to run
+    protected void interrupted() {
+    	switch (Robot.testMotor)
+    	{
+		case 0:
+	    	Robot.ssDriveTrain.motor1Set(0);
+    		break;
+		case 1:
+			Robot.ssDriveTrain.motor2Set(0);
+			break;
+		case 2:
+			Robot.ssDriveTrain.motor3Set(0);
+			break;
+		case 3:
+			Robot.ssDriveTrain.motor4Set(0);
+			break;
+		case 4:
+	    	Robot.ssDriveTrain.motor1Set(0);
+	    	Robot.ssDriveTrain.motor2Set(0);
+			break;
+		case 5:
+	    	Robot.ssDriveTrain.motor3Set(0);
+	    	Robot.ssDriveTrain.motor4Set(0);
+			break;
+		case 6:
+			Robot.ssElevator.motor1Set(0);
+			break;
+		case 7:
+			Robot.ssElevator.motor2Set(0);
+		default:
+			break;
+    	}
+    }
+}

@@ -3,6 +3,7 @@ package org.usfirst.frc.team3663.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+import org.usfirst.frc.team3663.robot.Robot;
 import org.usfirst.frc.team3663.robot.commands.C_ArcadeDrive;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -44,8 +45,32 @@ public class SSDriveTrain extends Subsystem {
     public void arcadeDrive(Joystick driveStick)
     {
     	chassis.arcadeDrive(driveStick);
-    	SmartDashboard.putNumber("leftDriveEncoder: ", leftEncoder.get());
-    	SmartDashboard.putNumber("rightDriveEncoder: ", rightEncoder.get());
+    }
+    
+    public void motor1Set(double speed)
+    {
+    	driveMotorL1.set(speed);
+    }
+    
+    public void motor2Set(double speed)
+    {
+    	driveMotorL2.set(speed);
+    }
+
+    public void motor3Set(double speed)
+    {
+    	driveMotorR1.set(speed);
+    }
+
+    public void motor4Set(double speed)
+    {
+    	driveMotorR2.set(speed);
+    }
+    
+    public void logValues()
+    {
+    	SmartDashboard.putNumber("leftDriveEncoder: ", Robot.ssDriveTrain.leftEncoder.get());
+    	SmartDashboard.putNumber("rightDriveEncoder: ", Robot.ssDriveTrain.rightEncoder.get());    	
     }
 }
 

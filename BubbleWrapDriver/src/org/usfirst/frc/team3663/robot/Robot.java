@@ -5,6 +5,9 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+
 //import org.usfirst.frc.team3663.robot.subsystems.ExampleSubsystem;
 //import org.usfirst.frc.team3663.robot.commands.ExampleCommand;
 import org.usfirst.frc.team3663.robot.commands.C_ArcadeDrive;
@@ -28,11 +31,66 @@ public class Robot extends IterativeRobot {
 
 	Command arcadeDrive;
     Command autonomousCommand;
+    
+	public static double motorTestSpeed = 0;
+	public static int testMotor = 0;
+	static String testMotorName;
 
-    /**
-     * This function is run when the robot is first started up and should be
-     * used for any initialization code.
-     */
+    public static void motorSpeedChange(double delta)
+    {
+    	motorTestSpeed+=delta;
+    	if (motorTestSpeed < -1)
+    	{
+    		motorTestSpeed = -1;
+    	}
+    	else if (motorTestSpeed > 1)
+    	{
+    		motorTestSpeed = 1;
+    	}
+    	SmartDashboard.putNumber("motorSpeed: ", motorTestSpeed);
+    }
+    
+    public static void testMotorChange(int delta)
+    {
+    	testMotor+=delta;
+    	switch (Robot.testMotor)
+    	{
+		case 0:
+	    	testMotorName = "DriveTrain L1";
+    		break;
+		case 1:
+			testMotorName = "DriveTrain L2";
+			break;
+		case 2:
+			testMotorName = "DriveTrain R1";
+			break;
+		case 3:
+			testMotorName = "DriveTrain R2";
+			break;
+		case 4:
+			testMotorName = "Both Left Drive Motors";
+			break;
+		case 5:
+			testMotorName = "Both Right Drive Motors";
+			break;
+		case 6:
+			testMotorName = "ElevWinch 1";
+			break;
+		case 7:
+			testMotorName = "ElevWinch 2";
+			break;
+		case 8:
+			testMotorName = "Both ElevWinch";
+			break;
+		case 9:
+			testMotorName = "Elevator In/Out";
+			break;
+		default:
+			break;
+    	}
+    	SmartDashboard.putString("testMotor: ", testMotorName);
+    }
+	
     public void robotInit() {
     	ssDriveTrain = new SSDriveTrain();
     	ssElevator = new SSElevator();
